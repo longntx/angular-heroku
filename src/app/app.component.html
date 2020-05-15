@@ -7,6 +7,9 @@
 <div class="content" role="main">
   <div class="d-flex flex-column">
     <div class="d-flex flex-column">
+      <label for="project-prefix">Project Prefix. EG: FTD</label>
+      <input id="project-prefix" class="form-control" type="text" [(ngModel)]="projectPrefix" />
+      <br/>
       <label for="default-link">Repo Pull Requests URL. Eg: https://bitbucket.org/est-rouge/ftd-admin-console/pull-requests/</label>
       <input id="default-link" class="form-control" type="text" [(ngModel)]="bitBucketRepoLink" />
     </div>

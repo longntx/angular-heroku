@@ -97,11 +97,11 @@ export class AppComponent {
 
   private generateDefaultVariables() {
     return {
-      regex: new RegExp(`(${this.projectPrefix}-([0-9]*)):(.*)((.|\\s)*?- #([0-9]*))(.*)`, 'gm'),
+      regex: new RegExp(`(${this.projectPrefix.trim()}-([0-9]*)):(.*)((.|\\s)*?- #([0-9]*))(.*)`, 'gm'),
       regexMultilines: /\s\s\s+/gm,
       regexMergin: /^(Merge in)(.*)(.|\s)*/gm,
       regexForReserve: /^\*.*\)/gm,
-      regexToCheckDuplicate: new RegExp(`(${this.projectPrefix}-[0-9]*)(.*)(\\[PR.*\\))`, 'gm'),
+      regexToCheckDuplicate: new RegExp(`(${this.projectPrefix.trim()}-[0-9]*)(.*)(\\[PR.*\\))`, 'gm'),
     };
   }
 }
